@@ -270,6 +270,55 @@ h2{
     display: flex;
     justify-content: space-between;
 }
+.why {
+    background-color: var(--blue);
+    padding: 114px 0 90px;
+}
+.why h2{
+    margin: 0 0 20px 0;
+}
+.why-item {
+    padding: 56px 0px 0px 0px;
+    border: 2px solid var(--yellow);
+    border-radius: 28px;
+}
+.why-item  p{
+    padding: 0 28px 0 19px;
+}
+.why-item__quote{
+    position: relative;
+    padding: 24px 28px 24px 19px;
+    background-color: var(--yellow);
+    border-radius: 26px;
+    margin-top: 32px;
+    font-weight: 600;
+}
+.why-item__quote::after{
+    position: absolute;
+    content: '';
+    width: 36px;
+    height: 36px;
+    background-image: url(../img/quote-top.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -36px;
+    right: 52px;
+}
+.why-item__num{
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 42px;
+    height: 45px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 600;
+}
 
 .footer{
     background-color: var(--dark-green);
@@ -309,4 +358,20 @@ h2{
 }
 .half{
     width: 50%;
+}
+.grid {
+    max-width: 1156px;
+  }
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+.grid-item{
+    width: 48%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.grid-item-full{
+    width: 100%;
 }
