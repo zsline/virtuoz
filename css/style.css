@@ -365,6 +365,125 @@ h2{
     margin-top: 70px;
     gap: 70px;
 }
+.quotes{
+    padding-bottom: 77px;
+}
+.quotes h2{
+    text-align: center;
+}
+.quotes__wrapper{
+    position: relative;
+}
+.quotes__slider{
+    position: relative;
+    height: 332px;
+    background-color: var(--blue);
+    border-radius: 25px;
+}
+
+.quotes__slider .swiper-slide{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quotes__slider .swiper-slide::after{
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 60px;
+    background-image: url(../img/quote-dec.svg);
+    top: 28px;
+    left: 45px;
+}
+.quotes__slider .swiper-slide p{
+    width: 80%;
+    transform: translateX(8%);
+}
+.quotes__slider--btns{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.quotes__slider--prev{
+    transform: translateX(-50%);
+}
+.quotes__slider--next{
+    transform: translateX(50%);
+}
+.quotes__slider--btn{
+    cursor: pointer;
+}
+.book{
+    padding: 20px 0 90px;
+}
+.book__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.book__img{
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.book__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book__info{
+    width: 60%;
+    font-size: 36px;
+}
+.book__info p:nth-child(1){
+    position: relative;
+    max-width: 466px;
+}
+.book__info p:nth-child(1)::after{
+    position: absolute;
+    content: '';
+    background-image: url(../img/book-1.svg);
+    width: 57px;
+    height: 53px;
+    right: -57px;
+    top: -32px;
+}
+.book__info p:nth-child(1)::before{
+    position: absolute;
+    content: '';
+    background-image: url(../img/book-2.svg);
+    width: 71px;
+    height: 102px;
+    right: 0px;
+    top: 40px;
+}
+.book__info p:nth-child(2){
+    position: relative;
+    max-width: 432px;
+    margin-left: auto;
+}
+.book__info p:nth-child(2)::before{
+    position: absolute;
+    content: '';
+    background-image: url(../img/book-3.svg);
+    width: 173px;
+    height: 122px;
+    left: -228px;
+    top: -6px;
+}
+.book__info span{
+    font-weight: 600;
+    color: var(--lilac);
+}
+.book__info .btn{
+    display: inline-block;
+    width: 100%;
+    margin-top: 80px;
+}
 .footer{
     background-color: var(--dark-green);
     padding: 90px 0;
