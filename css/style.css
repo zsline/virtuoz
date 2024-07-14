@@ -78,7 +78,7 @@ a{
     text-decoration: none;
 }
 h1{
-    font-size: 62px;
+    font-size: clamp(2.13rem, calc(1.46rem + 3.35vw), 3.88rem);
     font-weight: 600;
     color: var(--green);
 }
@@ -134,7 +134,7 @@ h2{
     margin-bottom: 70px;
 }
 .hero-home .subtitle{
-    font-size: 36px;
+    font-size: clamp(1.5rem, calc(1.21rem + 1.44vw), 2.25rem);
     max-width: 519px;
 }
 .hero-home .subtitle b{
@@ -697,3 +697,59 @@ padding: 0 0 80px;
     background: linear-gradient(180deg, rgba(8,95,85,1) 0%, rgba(8,95,85,0.7) 100%);
     color: white;
 }
+
+/* ================== MEDIA ==============*/
+
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1399.98px) {
+    .hero-home {
+        min-height: auto;
+    }
+}
+
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1199.98px) {
+    .hero-home {
+        min-height: auto;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 991.98px) {
+    .hero-home {
+        background-position: 58%;
+        min-height: auto;
+    }
+    .hero-home h1 {
+        max-width: 472px;
+        margin-bottom: 50px;
+    }
+    .hero-home .subtitle {
+        max-width: 472px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767.98px) { 
+    .hero-home {
+        background-position: 48% center;
+    }
+    .hero-home h1 {
+        max-width: 426px;
+        margin-bottom: 50px;
+    }
+    .hero-home .subtitle {
+        max-width: 426px;
+    }
+ }
+ 
+@media (max-width: 575.98px) {
+    
+}
+
+
+
+
