@@ -454,12 +454,20 @@
                             import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
                             // import Swiper from 'libs/swiper.js'
                             new Swiper('.reviews__slider', {
-                                slidesPerView: 2,
+                                slidesPerView: 1,
                                 spaceBetween: 18,
+                                autoHeight: true,
                                 navigation: {
                                     nextEl: '.reviews__slider--next',
                                     prevEl: '.reviews__slider--prev',
                                 },
+                                breakpoints: {
+                                    768: {
+                                        slidesPerView: 2,
+                                        autoHeight: false,
+
+                                    },
+                                }
                             });
                         </script>
                     </div>

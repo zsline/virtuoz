@@ -514,7 +514,7 @@ padding: 0 0 80px;
     align-items: stretch;
 }
 .reviews__slide{
-    padding: 55px 52px;
+    padding: 55px clamp(1rem, calc(0.02rem + 4.88vw), 3.5rem);
     background-color: var(--blue);
     border-radius: 25px;
     display: flex;

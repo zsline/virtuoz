@@ -5,7 +5,7 @@ window.onload = function () {
     itemSelector: '.grid-item',
     layoutMode: 'masonry'
   });
-
+  
 
 };
 
