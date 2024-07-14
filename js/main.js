@@ -5,5 +5,18 @@ window.onload = function () {
     itemSelector: '.grid-item',
     layoutMode: 'masonry'
   });
+
+
 };
 
+  // ========== MENU =================
+  const openBtn = document.querySelector('.header__btn--open');
+  const closeBtn = document.querySelector('.header__btn--close');
+  const navMenu = document.querySelector('.header__nav');
+
+  openBtn.addEventListener('click', () => {
+    navMenu.classList.add('open');
+  });
+  closeBtn.addEventListener('click', () =>{
+    navMenu.classList.remove('open');
+  });
