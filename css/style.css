@@ -65,7 +65,7 @@ body, html, ul, li{
 
 body{
     font-family: "Montserrat", sans-serif;
-    font-size: 22px;
+    font-size: clamp(1.13rem, calc(1.03rem + 0.48vw), 1.38rem);
 }
 p{
     margin: 8px 0;
@@ -83,7 +83,7 @@ h1{
     color: var(--green);
 }
 h2{
-    font-size: 52px;
+    font-size: clamp(1.88rem, calc(1.35rem + 2.63vw), 3.25rem);
     font-weight: 600;
     color: var(--green);
 }
@@ -150,7 +150,7 @@ h2{
 }
 
 .whom{
-    padding: 50px 0 100px;
+    padding: clamp(2.5rem, calc(2.26rem + 1.2vw), 3.13rem) 0 clamp(3.75rem, calc(2.79rem + 4.78vw), 6.25rem);
     background-color: var(--blue);
 }
 .whom__title{
@@ -187,10 +187,10 @@ h2{
     margin-top: 38px;
 }
 .benefit{
-    padding: 90px 0;
+    padding: clamp(1.25rem, calc(-0.42rem + 8.37vw), 5.63rem) 0;
 }
 .benefit h2{
-    max-width: 790px;
+    max-width: clamp(26.25rem, calc(17.4rem + 44.26vw), 49.38rem);
 }
 .benefit__wrapper{
     display: flex;
@@ -204,7 +204,7 @@ h2{
     justify-content: center;
     align-items: center;
     padding: 13px 53px 13px 13px;
-    font-size: 21px;
+    font-size: clamp(1.13rem, calc(1.05rem + 0.36vw), 1.31rem);
 }
 .benefit__item p{
     text-align: center;
@@ -214,7 +214,7 @@ h2{
 
 .experts{
     padding: 90px 0 100px;
-    font-size: 28px;
+    font-size: clamp(1.38rem, calc(1.23rem + 0.72vw), 1.75rem);
     font-weight: 600;
 }
 .experts__item{
@@ -231,7 +231,7 @@ h2{
     position: absolute;
     content: '';
     top: -48px;
-    left: 72%;
+    right: 7%;
     width: 63px;
     height: 58px;
     background-image: url(../img/Capa_1.svg);
@@ -301,7 +301,7 @@ h2{
     position: relative;
     background-image: url(../img/quote.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     background-position: center;
     padding-bottom: 28px;
@@ -607,12 +607,12 @@ padding: 0 0 80px;
 }
 
 .btn{
-    padding: 24px;
-    border-radius: 15px;
+    padding: clamp(1.25rem, calc(1.15rem + 0.48vw), 1.5rem);
+    border-radius: clamp(0.63rem, calc(0.51rem + 0.6vw), 0.94rem);
     border: 2px solid  var(--yellow);
     background-color: var(--yellow);
     color: black;
-    font-size: 20px;
+    font-size: clamp(1rem, calc(0.9rem + 0.48vw), 1.25rem);
     font-weight: 600;
     text-align: center;
     transition: all 0.3s;
@@ -687,19 +687,21 @@ padding: 0 0 80px;
 }
 .big-list li{
     position: relative;
-    padding-left: 60px;
+    padding-left: clamp(2.63rem, calc(2.22rem + 2.03vw), 3.69rem);
     margin-bottom: 16px;
 }
 .big-list li::after{
     position: absolute;
     content: '';
-    width: 33px;
-    height: 35px;
+    width: clamp(1.56rem, calc(1.37rem + 0.96vw), 2.06rem);
+    height: clamp(1.66rem, calc(1.45rem + 1.02vw), 2.19rem);
     left: 0;
     /* top: -2px; */
     top: 50%;
     transform: translateY(-50%);
     background-image: url(../img/list.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .green{
     background: linear-gradient(180deg, rgba(8,95,85,1) 0%, rgba(8,95,85,0.7) 100%);
@@ -737,6 +739,17 @@ padding: 0 0 80px;
     .hero-home .subtitle {
         max-width: 472px;
     }
+    .benefit__wrapper{
+        flex-direction: column-reverse;
+    }
+    .benefit__wrapper .half{
+        width: 100%;
+        margin: 0 auto;
+
+    }
+    .experts__dec::after{
+        right: -5%;
+    }
 }
 
 
@@ -752,7 +765,7 @@ padding: 0 0 80px;
         transform: translateY(-100%);
         background-color: rgba(255, 255, 255, 0.9);
         padding: 42px;
-        transition: all 0.5s ease-out;
+        transition: all 0.3s ease-out;
         z-index: 999;
     }
     .header__nav.open{
@@ -772,10 +785,46 @@ padding: 0 0 80px;
     .hero-home .subtitle {
         max-width: 426px;
     }
+    .whom ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .whom__btns{
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .benefit__item:nth-child(2){
+        padding: 0;
+    }
+    .experts__item{
+        display: block;
+        max-width: 500px;
+        width: 70%;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+    .experts__dec::after{
+        display: none;
+    }
  }
  
 @media (max-width: 575.98px) {
-    
+    .benefit h2{
+        text-align: center;
+    }
+    .experts__item{
+        width: 80%;
+    }
+    .experts__item img{
+        width: 100%;
+    }
+    .experts__wrapper a{
+        width: auto;
+        text-align:center;
+        text-wrap: balance;
+    }
 }
 
 
