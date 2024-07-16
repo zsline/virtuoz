@@ -242,10 +242,10 @@ h2{
     margin: 70px auto 0;
 }
 .about{
-    padding: 90px 0 100px;
+    padding: clamp(2.19rem, calc(0.87rem + 6.58vw), 5.63rem) 0 clamp(3.75rem, calc(2.79rem + 4.78vw), 6.25rem);
 }
 .about__offer{
-    font-size: 36px;
+    font-size: clamp(1.38rem, calc(-0.37rem + 3.68vw), 2.25rem);
 }
 .about__offer--text {
     width: 60%;
@@ -289,28 +289,31 @@ h2{
 
 }
 .why-item__clip{
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding-bottom: 0;
-    border-bottom: none;
     margin-bottom: 80px !important;
-
+    top: 225px !important;
 }
 .why-item__clip .why-item__quote{
-    background-color: transparent;
     position: relative;
-    background-image: url(../img/quote.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 100%;
-    background-position: center;
-    padding-bottom: 28px;
+    padding-bottom: 6px;
     margin: 0;
-    transform: translateY(40px);
+    transform: translateY(28px);
     scale: 1.007;
 }
+.why-item__clip .why-item__quote::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 80px;
+    border-radius: 26px;
+    background-color: inherit;
+    bottom: -17px;
+    left: 0;
+    transform: skew(0deg, -3deg);
+    z-index: -1;
+}
 .why-item__clip .why-item__quote::after{
-    top: -22px;
+    top: -34px;
 }
 .why-item__quote::after{
     position: absolute;
@@ -320,7 +323,7 @@ h2{
     background-image: url(../img/quote-top.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: -36px;
+    top: -34px;
     right: 52px;
 }
 .why-item__num{
@@ -358,7 +361,7 @@ h2{
     top: -80px;
 }
 .result{
-    padding: 90px 0;
+    padding: clamp(2.19rem, calc(0.87rem + 6.58vw), 5.63rem) 0;
 }
 .result h2{
     max-width: 780px;
@@ -398,9 +401,11 @@ h2{
 .quotes__slider .swiper-slide::after{
     position: absolute;
     content: '';
-    width: 90px;
-    height: 60px;
+    width: clamp(3.44rem, calc(2.64rem + 3.98vw), 5.63rem);
+    height: clamp(2.34rem, calc(1.83rem + 2.56vw), 3.75rem);
     background-image: url(../img/quote-dec.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     top: 28px;
     left: 45px;
 }
@@ -417,14 +422,24 @@ h2{
     transform: translateY(-50%);
     z-index: 999;
 }
+.slider-btn{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: clamp(1.88rem, calc(1.28rem + 2.95vw), 3.5rem);
+    height: clamp(1.96rem, calc(1.33rem + 3.12vw), 3.68rem);
+    cursor: pointer;
+}
 .quotes__slider--prev{
     transform: translateX(-50%);
 }
+.slider-prev{
+    background-image: url(../img/prev.svg);
+}
+.slider-next{
+    background-image: url(../img/next.svg);
+}
 .quotes__slider--next{
     transform: translateX(50%);
-}
-.quotes__slider--btn{
-    cursor: pointer;
 }
 .book{
     padding: 20px 0 90px;
@@ -500,7 +515,7 @@ padding: 0 0 80px;
 }
 .reviews__wrapper{
     position: relative;
-    padding-bottom: 98px;
+    padding-bottom: clamp(3.75rem, calc(2.93rem + 4.09vw), 6rem);
 }
 .reviews__slider--btns{
     position: absolute;
@@ -707,7 +722,9 @@ padding: 0 0 80px;
     background: linear-gradient(180deg, rgba(8,95,85,1) 0%, rgba(8,95,85,0.7) 100%);
     color: white;
 }
-
+.relative{
+    position: relative;
+}
 /* ================== MEDIA ==============*/
 
 
@@ -790,7 +807,7 @@ padding: 0 0 80px;
         align-items: center;
         gap: 16px;
     }
-    .whom__btns{
+    .whom__btns, .result .whom__btns{
         flex-direction: column;
         align-items: center;
         gap: 16px;
@@ -807,6 +824,35 @@ padding: 0 0 80px;
     }
     .experts__dec::after{
         display: none;
+    }
+    .about__offer--wrapper{
+        flex-direction: column-reverse;
+        font-size: clamp(1.38rem, calc(1.1rem + 1.36vw), 1.75rem)
+    }
+    .about__offer--text{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .about__offer--img{
+        display: block;
+        margin: 0 auto 40px;
+        width: 80%;
+        transform: translate(0);
+    }
+    .quotes__slider{
+        height: auto;
+    }
+    .quotes__slider .swiper-slide{
+        /* height: 100%; */
+        padding-top: 80px;
+        padding-bottom: 32px;
+    }
+    .quotes__slider .swiper-slide::after{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .quotes__slider .swiper-slide p{
+        transform: translate(0);
     }
  }
  
@@ -825,6 +871,24 @@ padding: 0 0 80px;
         text-align:center;
         text-wrap: balance;
     }
+    .about__offer--text{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .about__offer--img{
+        display: block;
+        margin: 0 auto 40px;
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }
+    .quotes__slider--btns{
+        top: auto;
+        bottom: -80px;
+        justify-content: center;
+    }
+
 }
 
 
