@@ -578,7 +578,7 @@ padding: 0 0 80px;
     padding-bottom: 90px;
 }
 .video__title{
-    font-size: 40px;
+    font-size: clamp(1.38rem, calc(0.97rem + 2.05vw), 2.5rem);
     font-weight: 600;
     color: var(--green);
     margin-bottom: 32px;
@@ -590,12 +590,12 @@ padding: 0 0 80px;
     margin-top: 55px;
 }
 .offer{
-    padding: 90px 0;
+    padding: clamp(3.75rem, calc(3.07rem + 3.41vw), 5.63rem) 0;
     text-align: center;
 }
 .offer__text{
     max-width: 961px;
-    font-size: 28px;
+    font-size: clamp(1.13rem, calc(0.9rem + 1.14vw), 1.75rem);
     font-weight: 600;
     margin-top: 30px;
     margin: 30px auto;
@@ -724,6 +724,14 @@ padding: 0 0 80px;
 }
 .relative{
     position: relative;
+}
+.zipper-img{
+    width: clamp(3.19rem, calc(2.73rem + 2.27vw), 4.44rem);
+    height: clamp(5.06rem, calc(4.31rem + 3.75vw), 7.13rem);
+}
+.smail-img{
+    width: clamp(3.38rem, calc(2.9rem + 2.39vw), 4.69rem);
+    height: clamp(3.56rem, calc(3.06rem + 2.5vw), 4.94rem);
 }
 /* ================== MEDIA ==============*/
 
