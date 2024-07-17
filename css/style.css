@@ -437,7 +437,7 @@ h2{
     cursor: pointer;
 }
 .quotes__slider--prev{
-    transform: translateX(-50%);
+    transform: translateX(-36%);
 }
 .slider-prev{
     background-image: url(../img/prev.svg);
@@ -446,7 +446,7 @@ h2{
     background-image: url(../img/next.svg);
 }
 .quotes__slider--next{
-    transform: translateX(50%);
+    transform: translateX(36%);
 }
 .book{
     padding: 20px 0 90px;
