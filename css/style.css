@@ -790,6 +790,10 @@ padding: 0 0 80px;
     .experts__dec::after{
         right: -5%;
     }
+    .why-item__title{
+        width: 65%;
+    }
+    
     .why-item__title::after{
         top: 50%;
         right: -20%;
@@ -926,6 +930,9 @@ padding: 0 0 80px;
     .btn{
         width: 100%;
     }
+    /* .quotes__slider .swiper-slide p{
+        margin-top: 40px;
+    } */
     .quotes__slider--btns{
         top: auto;
         bottom: -80px;
