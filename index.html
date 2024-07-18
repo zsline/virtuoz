@@ -40,33 +40,12 @@
         </header>
         <main class="main">
             <section class="hero-home" style="background-image: url(img/main-4096.webp);">
+                <picture>
+                    <source srcset="img/main-mobil.webp" media="(max-width: 575.98px)" />
+                    <img src="img/main-4096.webp" alt="" />
+                </picture>
                 <style>
-                    @media (max-width: 575.98px) {
-                        .hero-home{
-                            position: relative;
-                            background-image: url(img/main-mobil.webp) !important;
-                            background-repeat: no-repeat;
-                            background-position: bottom center;
-                            background-size: cover;
-                            width: 100vw;
-                            aspect-ratio: 1/2.35;
-                            text-align: center;
-                        }
-                        .hero-home::after{
-                            position: absolute;
-                            content: '';
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.00043767507002800965) 50%);
-                            z-index: 0;
-                        }
 
-                        .hero-home .subtitle{
-                            margin-top: 35px;
-                        }
-                    }
                 </style>
                 <div class="container">
                     <h1>Соцсети без хейта, зависти, непрошенных советов и конфликтов
