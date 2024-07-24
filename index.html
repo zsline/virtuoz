@@ -11,6 +11,7 @@
 
 <body>
     <div class="wrapper">
+        <div id="index"></div>
         <header class="header">
             <div class="container">
                 <div class="header__btn--open">
@@ -34,19 +35,17 @@
                         <li><a href="#">Бумажная версия</a></li>
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Купить книгу</a></li>
+                        <li><a href="blog.html">Блог</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main class="main">
-            <section class="hero-home" style="background-image: url(img/main-4096.webp);">
+            <section class="hero-home">
                 <picture>
-                    <source srcset="img/main-mobil.webp" media="(max-width: 575.98px)" />
+                    <source media="(max-width: 575.98px)" srcset="img/main-mobil.webp" />
                     <img src="img/main-4096.webp" alt="" />
                 </picture>
-                <style>
-
-                </style>
                 <div class="container">
                     <h1>Соцсети без хейта, зависти, непрошенных советов и конфликтов
                     </h1>
@@ -109,7 +108,7 @@
                                 ни таргетолог, ни специалист по SMM!
                             </p>
                         </div>
-                        <a href="#" class="btn">Подробнее о пользе для экспертов здесь</a>
+                        <a href="#main-popup" class="btn">Подробнее о пользе для экспертов здесь</a>
                     </div>
                 </div>
             </div>
@@ -487,6 +486,77 @@
                 </div>
             </div>
         </main>
+        <div id="main-popup" class="main-popup">
+            <a href="#index" class="popup-area"></a>
+            <div class="main-popup__wrapper">
+                <div class="main-popup__content">
+                    <a href="#index" class="popup__close">
+                        <svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 29.2843L29.2843 1.00003" stroke="#822C7E" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M1 1.28424L29.2843 29.5685" stroke="#822C7E" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <div class="popup__title">Хотите клиентов, которые мечтают попасть именно к вам?</div>
+                    <div class="popup__subtitle">Все секреты виртуального общения, для тех, кто продвигается в
+                        социальных сетях.</div>
+                    <div class="popup__text"><b>Почему сегодня, как никогда, актуальна тема виртуальных
+                            коммуникаций?</b>
+                        Продавая консультации и курсы, мы продаем не только знания — мы продаем общение
+                        с нами. То, как мы общаемся в сетях и мессенджерах, транслирует нашу ценность,
+                        как экспертов, и наши человеческие ценности. А это привлекает к нам правильную целевую
+                        аудиторию.
+                    </div>
+                    <a href="#" class="btn">Купить книгу</a>
+                    <div class="popup__block">
+                        <div class="popup__title--min">
+                            Эта книга — необходимое пособие для:
+                        </div>
+                        <div class="big-list">
+                            <ul>
+                                <li>психологов, коучей, помогающих практиков</li>
+                                <li>специалистов, которые ищут клиентов в сети</li>
+                                <li>экспертов, которые продвигаются в социальных сетях</li>
+                                <li>представителей интернет-профессий – маркетологов, таргетологов, SMM-специалистов, и
+                                    других</li>
+                            </ul>
+                        </div>
+                        <p>Социальные сети — это пространство для общения, завязывания и поддержания контакта с людьми.
+                            Всё остальное — успех, продажи, известность, — это результаты конструктивно выстроенных
+                            отношений.</p>
+                    </div>
+                    <div class="popup__block">
+                        <div class="popup__title--min">
+                            В книге много примеров, упражнений, тестов и чек-листов.
+                        </div>
+                        <p>Вы получите решения и ключи — прежде всего коммуникативного и психологического толка —
+                            которые полезны при работе онлайн</p>
+                    </div>
+                    <div class="popup__block">
+                        <div class="popup__title--min">
+                            Прочитав эту книгу и выполнив упражнения, вы:
+                        </div>
+                        <div class="big-list">
+                            <ul>
+                                <li>Перестанете бегать за клиентами в личку – они сами пойдут к вам</li>
+                                <li>Больше не будете обесценивать себя, свои услуги и продукты</li>
+                                <li>Разберетесь с синдромом самозванца</li>
+                                <li>Вам станет проще продавать услуги и продукты, хотя курить бамбук часто и долго точно
+                                    не выйдет.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="popup__block">
+                        <div class="popup__bottom-title">
+                            Купите свой экземпляр сейчас!
+                        </div>
+                        <a href="#" class="btn">Купить книгу</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
         <script src="js/main.js"></script>
         <footer class="footer">

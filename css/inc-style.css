@@ -60,7 +60,6 @@
 }
 @media (max-width: 575.98px) {
     .hero-home {
-        width: 100vw;
         aspect-ratio: 1/2.1;
         text-align: center;
     }
