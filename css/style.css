@@ -55,7 +55,9 @@
 
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 body, html, ul, li{
     margin: 0;
     padding: 0;
@@ -272,6 +274,9 @@ input[type=text]{
     height: clamp(3.56rem, calc(3.06rem + 2.5vw), 4.94rem);
 }
 
+
+/* ==================== BLOG =================*/
+
 .blog{
     padding-top: 40px;
     padding-bottom: 20px;
@@ -396,6 +401,111 @@ input[type=text]{
         padding: 0;
     }
 }
+/* ==================== END BLOG =================*/
+
+
+/* ==================== CONTACTS =================*/
+
+
+.contacts{
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.contacts__dec{
+    position: absolute;
+    top: 16px;
+    left: 0;
+}
+.contacts__dec svg{
+    width: clamp(7.5rem, calc(3.35rem + 20.73vw), 18.13rem);
+}
+.contacts h2{
+    text-align: center;
+}
+.contact__subtitle{
+    margin-top: 12%;
+    margin-left: 10%;
+    font-size: clamp(1.25rem, calc(1.05rem + 0.98vw), 1.75rem);
+    font-weight: 600;
+    color: var(--green);
+    max-width: 695px;
+}
+.contacts__social ul{
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.75rem, calc(1.12rem + 3.17vw), 3.38rem);
+    margin: 35px auto;
+}
+
+.contacts__form--title{
+    font-size: clamp(1.13rem, calc(0.98rem + 0.73vw), 1.5rem);
+    font-weight: 600;
+    max-width: 695px;
+    margin-bottom: 30px;
+}
+.contacts__form p{
+    margin-bottom: 30px;
+}
+.contacts__form input:not(.contacts__form input[type=checkbox]){
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 60px;
+    margin-top: 12px;
+    padding-left: clamp(1.75rem, calc(1.12rem + 3.17vw), 3.38rem);
+}
+.contacts__form input[type=checkbox]{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+}
+.form__check{
+    display: flex;
+    gap: 12px;
+}
+.contacts__form input[type=submit]{
+    display: flex !important;
+    width: max-content !important;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 48px !important;
+    font-size: 16px !important;
+    height: auto !important;
+    cursor: pointer;
+}
+.contacts__form textarea{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 12px;
+    padding: 20px clamp(1.75rem, calc(1.12rem + 3.17vw), 3.38rem) ;
+    resize: none;
+}
+.contacts__form input::placeholder{
+    font-size: 20px;
+}
+
+@media (max-width: 575.98px) {
+    .contacts__dec{
+        position: relative;
+        width: 274px;
+        margin: 0 auto;
+    }
+    .contacts__dec svg{
+        width: 100%;
+    }
+    .contacts__social ul li svg{
+        width: clamp(3rem, calc(-0.36rem + 16.8vw), 5.69rem);
+    }
+    .contacts__form input[type=submit]{
+        width: 100% !important;
+    }
+}
+/* ==================== END CONTACTS =================*/
+
 /* ==================== FOOTER =================*/
 .footer{
     background-color: var(--dark-green);
